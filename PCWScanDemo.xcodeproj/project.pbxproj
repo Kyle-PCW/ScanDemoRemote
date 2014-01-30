@@ -22,8 +22,8 @@
 		08C4A44918983DBC00B75B7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08C4A44718983DBC00B75B7B /* InfoPlist.strings */; };
 		08C4A44B18983DBC00B75B7B /* PCWScanDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C4A44A18983DBC00B75B7B /* PCWScanDemoTests.m */; };
 		08C4A45E18983EF200B75B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C4A45D18983EF200B75B7B /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		08C4A46A1898683B00B75B7B /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C4A4691898683B00B75B7B /* libCardIO.a */; };
 		08C4A4B81898B05E00B75B7B /* right2-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C4A4B71898B05E00B75B7B /* right2-25.png */; };
+		08C4A4C11899A40000B75B7B /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C4A4C01899A40000B75B7B /* libCardIO.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,14 +57,14 @@
 		08C4A44818983DBC00B75B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08C4A44A18983DBC00B75B7B /* PCWScanDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCWScanDemoTests.m; sourceTree = "<group>"; };
 		08C4A45D18983EF200B75B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		08C4A4631898683B00B75B7B /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
-		08C4A4641898683B00B75B7B /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
-		08C4A4651898683B00B75B7B /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
-		08C4A4661898683B00B75B7B /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
-		08C4A4671898683B00B75B7B /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOView.h; sourceTree = "<group>"; };
-		08C4A4681898683B00B75B7B /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
-		08C4A4691898683B00B75B7B /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
 		08C4A4B71898B05E00B75B7B /* right2-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right2-25.png"; sourceTree = "<group>"; };
+		08C4A4BA1899A40000B75B7B /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
+		08C4A4BB1899A40000B75B7B /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
+		08C4A4BC1899A40000B75B7B /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
+		08C4A4BD1899A40000B75B7B /* CardIOPaymentViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewControllerDelegate.h; sourceTree = "<group>"; };
+		08C4A4BE1899A40000B75B7B /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOView.h; sourceTree = "<group>"; };
+		08C4A4BF1899A40000B75B7B /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
+		08C4A4C01899A40000B75B7B /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			files = (
 				08C4A45E18983EF200B75B7B /* AVFoundation.framework in Frameworks */,
 				08C4A42218983DBC00B75B7B /* CoreGraphics.framework in Frameworks */,
-				08C4A46A1898683B00B75B7B /* libCardIO.a in Frameworks */,
+				08C4A4C11899A40000B75B7B /* libCardIO.a in Frameworks */,
 				08C4A42418983DBC00B75B7B /* UIKit.framework in Frameworks */,
 				08C4A42018983DBC00B75B7B /* Foundation.framework in Frameworks */,
 			);
@@ -96,7 +96,7 @@
 		08C4A41318983DBC00B75B7B = {
 			isa = PBXGroup;
 			children = (
-				08C4A4621898683B00B75B7B /* CardIO */,
+				08C4A4B91899A40000B75B7B /* CardIO */,
 				08C4A42518983DBC00B75B7B /* PCWScanDemo */,
 				08C4A44418983DBC00B75B7B /* PCWScanDemoTests */,
 				08C4A41E18983DBC00B75B7B /* Frameworks */,
@@ -169,19 +169,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		08C4A4621898683B00B75B7B /* CardIO */ = {
+		08C4A4B91899A40000B75B7B /* CardIO */ = {
 			isa = PBXGroup;
 			children = (
-				08C4A4631898683B00B75B7B /* CardIO.h */,
-				08C4A4641898683B00B75B7B /* CardIOCreditCardInfo.h */,
-				08C4A4651898683B00B75B7B /* CardIOPaymentViewController.h */,
-				08C4A4661898683B00B75B7B /* CardIOPaymentViewControllerDelegate.h */,
-				08C4A4671898683B00B75B7B /* CardIOView.h */,
-				08C4A4681898683B00B75B7B /* CardIOViewDelegate.h */,
-				08C4A4691898683B00B75B7B /* libCardIO.a */,
+				08C4A4BA1899A40000B75B7B /* CardIO.h */,
+				08C4A4BB1899A40000B75B7B /* CardIOCreditCardInfo.h */,
+				08C4A4BC1899A40000B75B7B /* CardIOPaymentViewController.h */,
+				08C4A4BD1899A40000B75B7B /* CardIOPaymentViewControllerDelegate.h */,
+				08C4A4BE1899A40000B75B7B /* CardIOView.h */,
+				08C4A4BF1899A40000B75B7B /* CardIOViewDelegate.h */,
+				08C4A4C01899A40000B75B7B /* libCardIO.a */,
 			);
-			name = CardIO;
-			path = ../../Downloads/card.io_ios_sdk_3.4.4/CardIO;
+			path = CardIO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +230,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Prairie Cloudware";
 				TargetAttributes = {
+					08C4A41B18983DBC00B75B7B = {
+						DevelopmentTeam = HGR2PR97X5;
+					};
 					08C4A43C18983DBC00B75B7B = {
 						TestTargetID = 08C4A41B18983DBC00B75B7B;
 					};
@@ -411,6 +413,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PCWScanDemo/PCWScanDemo-Prefix.pch";
 				INFOPLIST_FILE = "PCWScanDemo/PCWScanDemo-Info.plist";
@@ -418,12 +422,14 @@
 					"$(inherited)",
 					"/Users/kylethompson/Xcode\\ Projects/PCWScanDemo/PCWScanDemo/CardIO",
 					/Users/kylethompson/Downloads/card.io_ios_sdk_3.4.4/CardIO,
+					"/Users/kylethompson/Xcode\\ Projects/PCWScanDemo/CardIO",
 				);
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -433,6 +439,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PCWScanDemo/PCWScanDemo-Prefix.pch";
 				INFOPLIST_FILE = "PCWScanDemo/PCWScanDemo-Info.plist";
@@ -440,12 +448,14 @@
 					"$(inherited)",
 					"/Users/kylethompson/Xcode\\ Projects/PCWScanDemo/PCWScanDemo/CardIO",
 					/Users/kylethompson/Downloads/card.io_ios_sdk_3.4.4/CardIO,
+					"/Users/kylethompson/Xcode\\ Projects/PCWScanDemo/CardIO",
 				);
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
