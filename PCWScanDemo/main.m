@@ -15,7 +15,7 @@ int main(int argc, char * argv[])
     @autoreleasepool {
         
         @try {
-                    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+            return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
         }
         @catch (NSException *exception) {
             NSLog(@"%@",exception);

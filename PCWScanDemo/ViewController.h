@@ -6,12 +6,11 @@
 //  Copyright (c) 2014 Prairie Cloudware. All rights reserved.
 //
 
-//Tesing change from github
-
 
 #import <UIKit/UIKit.h>
 #import "CardIO.h"
 
+#define CardIOAppToken @"594d3ef39b4a43579fe008e7d4222353"
 
 @interface ViewController : UIViewController <CardIOPaymentViewControllerDelegate>
 

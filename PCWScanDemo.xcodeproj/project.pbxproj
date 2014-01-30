@@ -24,6 +24,7 @@
 		08C4A45E18983EF200B75B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C4A45D18983EF200B75B7B /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		08C4A4B81898B05E00B75B7B /* right2-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C4A4B71898B05E00B75B7B /* right2-25.png */; };
 		08C4A4C11899A40000B75B7B /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C4A4C01899A40000B75B7B /* libCardIO.a */; };
+		08C4A4C4189AAC7B00B75B7B /* DataTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C4A4C3189AAC7B00B75B7B /* DataTransfer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		08C4A4BE1899A40000B75B7B /* CardIOView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOView.h; sourceTree = "<group>"; };
 		08C4A4BF1899A40000B75B7B /* CardIOViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOViewDelegate.h; sourceTree = "<group>"; };
 		08C4A4C01899A40000B75B7B /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
+		08C4A4C2189AAC7B00B75B7B /* DataTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTransfer.h; sourceTree = "<group>"; };
+		08C4A4C3189AAC7B00B75B7B /* DataTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTransfer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				08C4A43518983DBC00B75B7B /* ViewController.m */,
 				08C4A43718983DBC00B75B7B /* Images.xcassets */,
 				08C4A42618983DBC00B75B7B /* Supporting Files */,
+				08C4A4C2189AAC7B00B75B7B /* DataTransfer.h */,
+				08C4A4C3189AAC7B00B75B7B /* DataTransfer.m */,
 			);
 			path = PCWScanDemo;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C4A4C4189AAC7B00B75B7B /* DataTransfer.m in Sources */,
 				08C4A43618983DBC00B75B7B /* ViewController.m in Sources */,
 				08C4A43018983DBC00B75B7B /* AppDelegate.m in Sources */,
 				08C4A42C18983DBC00B75B7B /* main.m in Sources */,

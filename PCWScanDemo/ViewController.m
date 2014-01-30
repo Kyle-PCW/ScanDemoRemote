@@ -55,7 +55,7 @@
 
     //Create the Card.IO view contoller and set app token
     CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
-    scanViewController.appToken = @"594d3ef39b4a43579fe008e7d4222353"; // get your app token from the card.io website
+    scanViewController.appToken = CardIOAppToken; // get your app token from the card.io website
 
     //Display the Card.io view controller
     NSLog(@"%@", @"Presenting the Card.io view contoller");
