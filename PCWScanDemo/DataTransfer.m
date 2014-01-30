@@ -29,6 +29,8 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
 }
 
 
+
+
 //Method to perfrom the Login request to the server
 - (void) authenticateToServer:(NSString *)userName withPass:(NSString *)password delegate:(id) loginDelegate{
     
@@ -56,7 +58,7 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
                                                                error:&error];
     
     if(!jsonLoginData){
-        NSLog(@"Converting to json error: %@",error);
+        NSLog(@"Converting to json error: %@ \n",error);
         
         //possibly throw error here to calling object
         return;
@@ -79,11 +81,15 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
     if( loginConnection ){
         [loginConnection cancel];
         loginConnection = nil;
+        NSLog(@"Previous login request was canceled.\n");
     }
     
-    //Set up and start the connection to send the request
-    //The request is sent asynchronously and the response will be handeled in the delegate methods
+    //Set up the connection to send the request
     loginConnection = [[NSURLConnection alloc] initWithRequest:loginRequest delegate:loginDelegate];
+    
+    //Start the request
+    //The request is sent asynchronously and the response will be handeled in the delegate methods
+    NSLog(@"Starting login request.\n");
     [loginConnection start];
     
 }

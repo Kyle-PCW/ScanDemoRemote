@@ -22,9 +22,9 @@
 		08C4A44918983DBC00B75B7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 08C4A44718983DBC00B75B7B /* InfoPlist.strings */; };
 		08C4A44B18983DBC00B75B7B /* PCWScanDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C4A44A18983DBC00B75B7B /* PCWScanDemoTests.m */; };
 		08C4A45E18983EF200B75B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C4A45D18983EF200B75B7B /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		08C4A4B81898B05E00B75B7B /* right2-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 08C4A4B71898B05E00B75B7B /* right2-25.png */; };
 		08C4A4C11899A40000B75B7B /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C4A4C01899A40000B75B7B /* libCardIO.a */; };
 		08C4A4C4189AAC7B00B75B7B /* DataTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C4A4C3189AAC7B00B75B7B /* DataTransfer.m */; };
+		08C4A4CA189ACBCE00B75B7B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C4A4C9189ACBCE00B75B7B /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,6 @@
 		08C4A44818983DBC00B75B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		08C4A44A18983DBC00B75B7B /* PCWScanDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCWScanDemoTests.m; sourceTree = "<group>"; };
 		08C4A45D18983EF200B75B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		08C4A4B71898B05E00B75B7B /* right2-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right2-25.png"; sourceTree = "<group>"; };
 		08C4A4BA1899A40000B75B7B /* CardIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIO.h; sourceTree = "<group>"; };
 		08C4A4BB1899A40000B75B7B /* CardIOCreditCardInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOCreditCardInfo.h; sourceTree = "<group>"; };
 		08C4A4BC1899A40000B75B7B /* CardIOPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardIOPaymentViewController.h; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		08C4A4C01899A40000B75B7B /* libCardIO.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCardIO.a; sourceTree = "<group>"; };
 		08C4A4C2189AAC7B00B75B7B /* DataTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTransfer.h; sourceTree = "<group>"; };
 		08C4A4C3189AAC7B00B75B7B /* DataTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTransfer.m; sourceTree = "<group>"; };
+		08C4A4C9189ACBCE00B75B7B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C4A4CA189ACBCE00B75B7B /* CFNetwork.framework in Frameworks */,
 				08C4A45E18983EF200B75B7B /* AVFoundation.framework in Frameworks */,
 				08C4A42218983DBC00B75B7B /* CoreGraphics.framework in Frameworks */,
 				08C4A4C11899A40000B75B7B /* libCardIO.a in Frameworks */,
@@ -119,6 +120,7 @@
 		08C4A41E18983DBC00B75B7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08C4A4C9189ACBCE00B75B7B /* CFNetwork.framework */,
 				08C4A45D18983EF200B75B7B /* AVFoundation.framework */,
 				08C4A41F18983DBC00B75B7B /* Foundation.framework */,
 				08C4A42118983DBC00B75B7B /* CoreGraphics.framework */,
@@ -131,7 +133,6 @@
 		08C4A42518983DBC00B75B7B /* PCWScanDemo */ = {
 			isa = PBXGroup;
 			children = (
-				08C4A4B71898B05E00B75B7B /* right2-25.png */,
 				08C4A42E18983DBC00B75B7B /* AppDelegate.h */,
 				08C4A42F18983DBC00B75B7B /* AppDelegate.m */,
 				08C4A43118983DBC00B75B7B /* Main.storyboard */,
@@ -267,7 +268,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08C4A4B81898B05E00B75B7B /* right2-25.png in Resources */,
 				08C4A43818983DBC00B75B7B /* Images.xcassets in Resources */,
 				08C4A42A18983DBC00B75B7B /* InfoPlist.strings in Resources */,
 				08C4A43318983DBC00B75B7B /* Main.storyboard in Resources */,
