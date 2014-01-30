@@ -426,7 +426,6 @@
 				INFOPLIST_FILE = "PCWScanDemo/PCWScanDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/kylethompson/Xcode\\ Projects/PCWScanDemo/PCWScanDemo/CardIO",
 					/Users/kylethompson/Downloads/card.io_ios_sdk_3.4.4/CardIO,
 					"/Users/kylethompson/Xcode\\ Projects/PCWScanDemo/CardIO",
 				);
@@ -452,7 +451,6 @@
 				INFOPLIST_FILE = "PCWScanDemo/PCWScanDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/kylethompson/Xcode\\ Projects/PCWScanDemo/PCWScanDemo/CardIO",
 					/Users/kylethompson/Downloads/card.io_ios_sdk_3.4.4/CardIO,
 					"/Users/kylethompson/Xcode\\ Projects/PCWScanDemo/CardIO",
 				);

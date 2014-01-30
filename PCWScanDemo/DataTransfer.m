@@ -44,10 +44,13 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
     //TODO  -  Update to format from Al
     NSDictionary * loginData = [[NSDictionary alloc] initWithObjectsAndKeys:
                                                    // @"Value", @"Key",
-                                                    @"UserName",userName,
-                                                    @"Password",password,
+                                                    @"type",@"devLoginRq",
+                                                    @"req-uuid",UUID,
+                                                    @"req-version",@"1.0",
+                                                    @"device-id",@"null",   //Don't know if this is available
+                                                    @"user-id",userName,
+                                                    @"user-secret",password,
                                                     @"UUID",UUID,
-                                                    @"SystemVersion",systemVersion,
                                                     nil];
     
     //Convert data dictionary int JSON data
