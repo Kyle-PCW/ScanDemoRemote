@@ -12,7 +12,7 @@
 #import "CardIO.h"
 
 #define LoginURLString @"http://localhost:8080/login"
-#define sendCardURLString @"http://localhost:8080/login"
+#define sendCardURLString @"http://localhost:8080/uploadData"
 
 @interface DataTransfer : NSObject {
 
@@ -20,7 +20,10 @@
 
 
 @property (strong, nonatomic) NSURLConnection * loginConnection;
+@property (strong, nonatomic) NSURLConnection * sendDataConnection;
 @property (strong, nonatomic) NSMutableData * returnedLoginData;
+@property (strong, nonatomic) UIDevice * device;
+
 
 @property (strong, nonatomic) NSString * accessToken;
 @property (strong, nonatomic) NSString * tokenLife;  //number of seconds token is valid

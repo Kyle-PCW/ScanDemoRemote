@@ -140,8 +140,7 @@
     if( [jsonDictionary[@"type"] isEqualToString:@"devLoginRs"] ){
         
         //Verify that the response contains the same uuid sent in the request
-        UIDevice * device = [[UIDevice alloc] init];
-        NSString * myUUID = [[device identifierForVendor] UUIDString];
+        NSString * myUUID = [[dataTransfer.device identifierForVendor] UUIDString];
         NSString * rsUUID = jsonDictionary[@"req-uuid"];
         
         if( ![myUUID isEqualToString:rsUUID] ){

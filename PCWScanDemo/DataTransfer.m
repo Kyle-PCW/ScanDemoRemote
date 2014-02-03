@@ -11,7 +11,10 @@
 @implementation DataTransfer
 
 @synthesize loginConnection;
+@synthesize sendDataConnection;
+
 @synthesize returnedLoginData;
+@synthesize device;
 
 @synthesize accessToken;
 @synthesize tokenLife;
@@ -31,6 +34,9 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
         //Custom initialization here
         loginConnection = nil;
         returnedLoginData = [[NSMutableData alloc] init];
+        
+        //Get a handle on the device info
+        device = [[UIDevice alloc] init];
     }
     return self;
 }
@@ -43,8 +49,7 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
     
     
     //Get device info
-    UIDevice * device = [[UIDevice alloc] init];
-    NSString * UUID = [device.identifierForVendor UUIDString];
+    NSString * UUID = [self.device.identifierForVendor UUIDString];
   //  NSString * systemVersion = device.systemVersion;
     
     //Build a NSDictionary to hold the data
@@ -57,7 +62,7 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
                                                     @"null",@"device-id",   //Don't know if this is available
                                                     userName,@"user-id",
                                                     password,@"user-secret",
-                                                    UUID,@"UUID",
+                                                    UUID,@"UUID",           //added this because requ-uuid was causing problems on server
                                                     nil];
     
     //Convert data dictionary int JSON data
@@ -108,6 +113,92 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
 // Multipart data:  JSON card info and an image of the front of the card
 - (void) sendCardInfoToServer:(CardIOCreditCardInfo *) cardInfo withImage:(UIImage *) image delegate:(id) sendCardDelegate{
 
+    //Get device info
+    NSString * UUID = [self.device.identifierForVendor UUIDString];
+    
+    
+    //Build a dictionary to hold the card data  //TODO *** define card data and finish building dictionary
+    NSDictionary * cardData = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                                    //@"Value", @"Key",
+                                                    cardInfo.cardNumber, @"cardNum",
+                                                    cardInfo.cvv, @"cardCVV",
+                                                    nil];
+    
+    //Build a NSDictionary to hold the data
+    //TODO  -  Update to format from Al
+    NSDictionary * sendData = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                // @"Value", @"Key",
+                                @"instumentScanRq",@"type",
+                                UUID,@"req-uuid",
+                                @"1.0",@"req-version",
+                                accessToken, @"access-tkn",
+                                @"creditCard", @"instr-type",
+                                cardData, @"instr-data",
+                                nil];
+    
+    //Convert data dictionary int JSON data
+    NSLog(@"Creating json with data:\n%@",sendData);
+    NSError *error;
+    NSData * jsonSendData = [NSJSONSerialization dataWithJSONObject:sendData
+                                                             options:NSJSONWritingPrettyPrinted
+                                                               error:&error];
+    
+    if(!jsonSendData){
+        NSLog(@"Converting to json error: %@ \n",error);
+        //possibly throw error here to calling object
+        return;
+    }
+    
+    //Convert Image to NSData
+    NSData * dataImage = UIImageJPEGRepresentation(image, 1.0f);
+    
+    //Set a name for the Image
+    NSString * filename = @"testCardImage";
+    
+    //Setup the URL
+    NSURL * loginURL = [NSURL URLWithString:sendCardURLString]; // LoginURL defined in header file
+    
+    // Create a 'POST' MutableRequest with Data and other Image Attachment.
+    NSMutableURLRequest * request = [[NSMutableURLRequest alloc] init];
+    [request setURL:loginURL];
+    [request setHTTPMethod:@"POST"];
+    NSString * boundary = @"---------------------------14737809831466499882746641449";
+    NSString * contentType = [NSString stringWithFormat:@"multipart/form-data; boundry=%@", boundary];
+    [request addValue:contentType forHTTPHeaderField:@"Content-Type"];
+    
+    NSMutableData * postBody = [NSMutableData data];
+    
+    //This is a part of the multipart request ********** (JSON)
+    [postBody appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"cardInfo\"; \"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[@"Content-Type: application/json\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[NSData dataWithData:jsonSendData]];
+    
+    //This is another part of the multipart request ************* (Image data)
+    [postBody appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"cardImage\"; filename=\"%@.jpg\"\r\n", filename] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    [postBody appendData:[NSData dataWithData:dataImage]];
+    [postBody appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    //Set the body of the request
+    [request setHTTPBody:postBody];
+    
+    //Cancel the loginConnection if it is active
+    if( sendDataConnection ){
+        [sendDataConnection cancel];
+        sendDataConnection = nil;
+        NSLog(@"Previous login request was canceled.\n");
+    }
+    
+    //Set up the connection to send the request
+    sendDataConnection = [[NSURLConnection alloc] initWithRequest:request delegate:sendCardDelegate];
+    
+    //Start the request
+    //The request is sent asynchronously and the response will be handeled in the delegate methods
+    NSLog(@"Starting sendDataConnection request.\n");
+    [sendDataConnection start];
+    
 }
 
 @end
