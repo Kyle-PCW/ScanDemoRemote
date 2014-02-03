@@ -9,8 +9,10 @@
 //This is a singleton class to handle data transfer between the device and server
 
 #import <Foundation/Foundation.h>
+#import "CardIO.h"
 
-#define LoginURLString @"http://localhost:8080/test"
+#define LoginURLString @"http://localhost:8080/login"
+#define sendCardURLString @"http://localhost:8080/login"
 
 @interface DataTransfer : NSObject {
 
@@ -27,5 +29,7 @@
 + (DataTransfer *) sharedManager;  // class method to return the singleton object
 
 - (void) authenticateToServer:(NSString *)userName withPass:(NSString *)pass delegate:(id) loginDelegate;
+
+- (void) sendCardInfoToServer:(CardIOCreditCardInfo *) cardInfo withImage:(UIImage *) image delegate:(id) sendCardDelegate;
 
 @end

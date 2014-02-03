@@ -30,6 +30,7 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
     if (self = [super init]) {
         //Custom initialization here
         loginConnection = nil;
+        returnedLoginData = [[NSMutableData alloc] init];
     }
     return self;
 }
@@ -101,6 +102,12 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
     NSLog(@"Starting login request.\n");
     [loginConnection start];
     
+}
+
+// Method to send cardinfo to the server
+// Multipart data:  JSON card info and an image of the front of the card
+- (void) sendCardInfoToServer:(CardIOCreditCardInfo *) cardInfo withImage:(UIImage *) image delegate:(id) sendCardDelegate{
+
 }
 
 @end

@@ -113,6 +113,9 @@
 // We will parse the return data from this method.
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     
+    
+    NSLog(@"result description: %@", dataTransfer.returnedLoginData.description);
+    
     [loginActivityIndicator stopAnimating];
     [loginActivityIndicator setHidden:YES];
     
@@ -120,8 +123,10 @@
     
     dataTransfer.loginConnection = nil;
     
+
+    
     NSError * error;
-    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:dataTransfer.returnedLoginData options:0 error:&error];
+    NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:dataTransfer.returnedLoginData options:kNilOptions error:&error];
     
     //Check for JSON error
     if(jsonDictionary){
@@ -165,7 +170,6 @@
         [self performSegueWithIdentifier:@"loginSegue" sender:self];
     
     }
-    
 
     
 }
