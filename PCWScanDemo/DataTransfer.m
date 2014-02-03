@@ -10,6 +10,12 @@
 
 @implementation DataTransfer
 
+@synthesize loginConnection;
+@synthesize returnedLoginData;
+
+@synthesize accessToken;
+@synthesize tokenLife;
+
 static DataTransfer * sharedInstance = nil;  //Static instance variable
 
 + (DataTransfer *) sharedManager{
@@ -38,19 +44,19 @@ static DataTransfer * sharedInstance = nil;  //Static instance variable
     //Get device info
     UIDevice * device = [[UIDevice alloc] init];
     NSString * UUID = [device.identifierForVendor UUIDString];
-    NSString * systemVersion = device.systemVersion;
+  //  NSString * systemVersion = device.systemVersion;
     
     //Build a NSDictionary to hold the data
     //TODO  -  Update to format from Al
     NSDictionary * loginData = [[NSDictionary alloc] initWithObjectsAndKeys:
                                                    // @"Value", @"Key",
-                                                    @"type",@"devLoginRq",
-                                                    @"req-uuid",UUID,
-                                                    @"req-version",@"1.0",
-                                                    @"device-id",@"null",   //Don't know if this is available
-                                                    @"user-id",userName,
-                                                    @"user-secret",password,
-                                                    @"UUID",UUID,
+                                                    @"devLoginRq",@"type",
+                                                    UUID,@"req-uuid",
+                                                    @"1.0",@"req-version",
+                                                    @"null",@"device-id",   //Don't know if this is available
+                                                    userName,@"user-id",
+                                                    password,@"user-secret",
+                                                    UUID,@"UUID",
                                                     nil];
     
     //Convert data dictionary int JSON data

@@ -10,13 +10,18 @@
 
 #import <Foundation/Foundation.h>
 
-#define LoginURLString @""
+#define LoginURLString @"http://localhost:8080/test"
 
 @interface DataTransfer : NSObject {
-    
-    NSURLConnection * loginConnection;
 
 }
+
+
+@property (strong, nonatomic) NSURLConnection * loginConnection;
+@property (strong, nonatomic) NSMutableData * returnedLoginData;
+
+@property (strong, nonatomic) NSString * accessToken;
+@property (strong, nonatomic) NSString * tokenLife;  //number of seconds token is valid
 
 
 + (DataTransfer *) sharedManager;  // class method to return the singleton object

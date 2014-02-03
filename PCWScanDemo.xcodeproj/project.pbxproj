@@ -25,6 +25,7 @@
 		08C4A4C11899A40000B75B7B /* libCardIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C4A4C01899A40000B75B7B /* libCardIO.a */; };
 		08C4A4C4189AAC7B00B75B7B /* DataTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C4A4C3189AAC7B00B75B7B /* DataTransfer.m */; };
 		08C4A4CA189ACBCE00B75B7B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C4A4C9189ACBCE00B75B7B /* CFNetwork.framework */; };
+		08C4A4CD189C3C5E00B75B7B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C4A4CC189C3C5E00B75B7B /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		08C4A4C2189AAC7B00B75B7B /* DataTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTransfer.h; sourceTree = "<group>"; };
 		08C4A4C3189AAC7B00B75B7B /* DataTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTransfer.m; sourceTree = "<group>"; };
 		08C4A4C9189ACBCE00B75B7B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		08C4A4CB189C3C5E00B75B7B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		08C4A4CC189C3C5E00B75B7B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				08C4A42618983DBC00B75B7B /* Supporting Files */,
 				08C4A4C2189AAC7B00B75B7B /* DataTransfer.h */,
 				08C4A4C3189AAC7B00B75B7B /* DataTransfer.m */,
+				08C4A4CB189C3C5E00B75B7B /* LoginViewController.h */,
+				08C4A4CC189C3C5E00B75B7B /* LoginViewController.m */,
 			);
 			path = PCWScanDemo;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				08C4A43618983DBC00B75B7B /* ViewController.m in Sources */,
 				08C4A43018983DBC00B75B7B /* AppDelegate.m in Sources */,
 				08C4A42C18983DBC00B75B7B /* main.m in Sources */,
+				08C4A4CD189C3C5E00B75B7B /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
